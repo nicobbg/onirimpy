@@ -22,3 +22,7 @@ class Deck:
     This method shuffle the whole deck
     """
 
+    def pop_card(self):
+    """
+    This method pop out the card on top of the pile
+    """

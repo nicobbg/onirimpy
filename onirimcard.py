@@ -40,6 +40,6 @@ class Labyrinth(Card):
 
     def __init__(self, colour, symbol):
         Card.__init__(self, "Labyrinth")
-	self.colour = colour
+        self.colour = colour
         self.symbol = symbol
 
