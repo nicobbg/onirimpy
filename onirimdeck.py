@@ -1,5 +1,6 @@
 import random
-from onirimcard import *
+from cards.card import Card
+
 
 class Deck:
     """
@@ -16,19 +17,19 @@ class Deck:
             self.deck.append(Card('Nightmare'))
         for c in self.colours:
             for i in range(2):
-                self.deck.append(Door(c))
+                self.deck.append(Card('Door', c))
             for i in range(3):
-                self.deck.append(Labyrinth(c,'Key'))
+                self.deck.append(Card('Labyrinth', c, 'Key'))
             for i in range(4):
-                self.deck.append(Labyrinth(c,'Moon'))
+                self.deck.append(Card('Labyrinth', c,'Moon'))
         for i in range(9):
-            self.deck.append(Labyrinth('Red','Sun'))
+            self.deck.append(Card('Labyrinth', 'Red', 'Sun'))
         for i in range(8):
-            self.deck.append(Labyrinth('Blue','Sun'))
+            self.deck.append(Card('Labyrinth', 'Blue', 'Sun'))
         for i in range(7):
-            self.deck.append(Labyrinth('Green','Sun'))
+            self.deck.append(Card('Labyrinth', 'Green', 'Sun'))
         for i in range(6):
-            self.deck.append(Labyrinth('White','Sun'))
+            self.deck.append(Card('Labyrinth', 'White', 'Sun'))
 
     def get(self):
         """
