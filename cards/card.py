@@ -16,9 +16,10 @@ class Card:
         self.colour = colour
         self.symbol = symbol
 
-    def get(self):
+    def show(self):
         """
-        :rtype: dict
-        :return: all attributes of the card object
+        :rtype: str
+        :return: the cards's attributes
         """
         return vars(self)
+

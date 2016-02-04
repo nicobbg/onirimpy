@@ -6,7 +6,7 @@ class Deck:
     """
     This is a Deck.
     A Deck is a list of 76 cards : 58 Labyrinth cards, 8 Door cards and 10 Nightmare cards.
-    There are 2 Door cards or each colour in the deck
+    There are 2 Door cards of each colour in the deck
     There are 16 Red Labyrinth cards, 15 Blue Lab cards, 14 Green Lab cards and 13 White Lab cards.
     """
     deck = []
@@ -31,12 +31,12 @@ class Deck:
         for i in range(6):
             self.deck.append(Card('Labyrinth', 'White', 'Sun'))
 
-    def get(self):
+    def show(self):
         """
         This method print the content of the deck card by card
         """
         for card in self.deck:
-            print card.get()
+            print card.show()
 
     def len(self):
         """
@@ -58,3 +58,5 @@ class Deck:
         """
         This method pop out the card on top of the pile
         """
+        return self.deck.pop()
+
