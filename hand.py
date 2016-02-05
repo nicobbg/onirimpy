@@ -2,13 +2,18 @@ class Hand:
     """
     This is a Hand.
     A hand is composed of 5 cards.
-    The 5 cards are drown from the top of the Deck
     """
     cards_in_hand = 0
     cards_in_hand_list = []
     limbo = []
 
     def __init__(self, deck):
+    """
+    The 5 cards are drown from the top of the Deck
+    The first hand is only composed of Labyrinth cards
+    Every Door and Nightmare cards that are drown during the 1st hand phase are put into the Limbo stack and then
+    the Limbo is put back into the deck. Finally the deck is shuffled.
+    """
         while self.cards_in_hand < 5:
             c = deck.pop_card()
             if c.type is not 'Labyrinth':
