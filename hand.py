@@ -6,17 +6,19 @@ class Hand:
     """
     cards_in_hand = 0
     cards_in_hand_list = []
+    limbo = []
 
     def __init__(self, deck):
         while self.cards_in_hand < 5:
             c = deck.pop_card()
-            print c.type
             if c.type is not 'Labyrinth':
-                print 'this is not a Labyrinth card\n'
+                self.limbo.append(c)
             else:
                 self.cards_in_hand_list.append(c)
                 self.cards_in_hand += 1
-        print str(self.cards_in_hand) + ' cards in your hand\n'
+        for l_card in self.limbo:
+            deck.put_card(l_card)
+        deck.shuffle()
 
 
     def show(self):

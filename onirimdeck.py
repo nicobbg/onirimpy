@@ -60,3 +60,10 @@ class Deck:
         """
         return self.deck.pop()
 
+    def put_card(self, card):
+        """
+        This method adds a card on top of the deck
+        """
+        self.deck.append(card)
+
+
