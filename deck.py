@@ -50,9 +50,6 @@ class Deck:
         :rtype: list
         """
         random.shuffle(self.deck)
-        """
-        This method shuffle the whole deck
-        """
 
     def pop_card(self):
         """
