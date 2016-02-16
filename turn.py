@@ -7,8 +7,9 @@ class Turn:
     """
 
     step = 0
+    choice
 
-    def __init__(self, game_start=False):
+    def __init__(self, game_start=False, hand):
         self.step = 1
         if game_start is True:
             pass
@@ -16,3 +17,6 @@ class Turn:
         else:
             pass
             # TODO propose draw or play
+
+
+    def drawCard(self):

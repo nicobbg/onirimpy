@@ -25,7 +25,6 @@ class Hand:
             deck.put_card(l_card)
         deck.shuffle()
 
-
     def show(self):
         """
         :return: the cards in my hand
@@ -39,4 +38,16 @@ class Hand:
         """
         return self.cards_in_hand
 
+    def play_card(self):
+        """
+        playCard makes you choose 1 card from your hand
+        this card will be appended to the play mat
+        :return: the select card to play
+        """
+        print "this is your hand"
+        self.show()
+        choice = input("select and play one card from your hand (1...10)")
+        card_to_play = self.cards_in_hand_list.pop(choice - 1)
+        self.cards_in_hand -= 1
+        return card_to_play
 
