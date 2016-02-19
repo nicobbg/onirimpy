@@ -1,3 +1,6 @@
+
+
+
 class Hand:
     """
     This is a Hand.
@@ -40,14 +43,24 @@ class Hand:
 
     def play_card(self):
         """
-        playCard makes you choose 1 card from your hand
+        play_card makes you choose 1 card from your hand
         this card will be appended to the play mat
         :return: the select card to play
         """
         print "this is your hand"
         self.show()
-        choice = input("select and play one card from your hand (1...10)")
-        card_to_play = self.cards_in_hand_list.pop(choice - 1)
+        choice = input("select and play one card from your hand (1...10)\n")
+        choice -= 1
+        card_to_play = self.cards_in_hand_list.pop(choice)
         self.cards_in_hand -= 1
         return card_to_play
 
+    def draw_card(self, deck):
+        """
+        draw_card will take the top card from the deck and append it to your hand
+        :return: nothing
+        """
+        self.cards_in_hand_list.append(deck.pop_card())
+        self.cards_in_hand += 1
+        print "this is your hand"
+        self.show()
